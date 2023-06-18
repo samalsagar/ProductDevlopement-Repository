@@ -81,27 +81,37 @@ public class ProductEntity {
 	}
 
 	public double getDiscount() {
+		if(prodPrice>=1000) {
+			discount = 0.10;
+			return discount;
+		}
 		return discount;
 	}
-
+	
+	
 	public void setDiscount(double discount) {
 		this.discount = discount;
 	}
 
+	
 	public double getGst() {
+		gst = 0.05;
 		return gst;
 	}
-
+	
 	public void setGst(double gst) {
 		this.gst = gst;
 	}
 
+
 	public double getTotalPrice() {
+		discount = prodPrice*discount;
+		gst = prodPrice*gst;
+		totalPrice = prodPrice-discount+gst;
 		return totalPrice;
 	}
 
 	public void setTotalPrice(double totalPrice) {
-		
 		this.totalPrice = totalPrice;
 	}
 
