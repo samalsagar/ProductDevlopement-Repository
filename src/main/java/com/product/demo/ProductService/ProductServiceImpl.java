@@ -44,5 +44,11 @@ public class ProductServiceImpl implements ProductService {
 		 ProductEntity saveEntity = productRepository.save(entity);
 		 return saveEntity.getProdId()!=null;
 	}
+	
+	@Override
+	public List<ProductPojo> getAllProducts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
