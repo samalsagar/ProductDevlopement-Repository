@@ -88,6 +88,7 @@ public class ProductEntity {
 		return discount;
 	}
 	
+<<<<<<< HEAD
 	
 	public void setDiscount(double discount) {
 		this.discount = discount;
@@ -120,5 +121,9 @@ public class ProductEntity {
 		return "ProductEntity [prodId=" + prodId + ", prodName=" + prodName + ", prodCode=" + prodCode + ", prodPrice="
 				+ prodPrice + ", discount=" + discount + ", gst=" + gst + ", totalPrice=" + totalPrice + "]";
 	}
+=======
+	private Integer ProdId;
+	
+>>>>>>> 5e7d84be690720e073d627121f6c824d8419a035
 
 }
