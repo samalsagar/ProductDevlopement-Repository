@@ -1,29 +1,43 @@
 package com.product.demo.ProductController;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.product.demo.ProductService.ProductServiceImpl;
-import com.product.demo.entity.ProductEntity;
+import com.product.demo.dto.ProductPojo;
 
-@RestController
+@Controller
 public class ProductController {
 
 	@Autowired
 	private ProductServiceImpl productServiceImpl;
-
-	@PostMapping("/addproducts")
-	public ProductEntity addProduct(@RequestBody ProductEntity productEntity) {
-		return productServiceImpl.addProduct(productEntity);
+       
+	@GetMapping("/loadFrom")
+	public String saveData(Model model) {
+		System.out.println("Load Frm");
+		ProductPojo object = new ProductPojo();
+		model.addAttribute("productPojo", object);
+		return "home";
 	}
 	
-	@GetMapping("/viewproducts")
-	public List<ProductEntity> viewAllProduct(){
-		return  productServiceImpl.viewAllProduct();
+	@PostMapping("/saveProduct")
+	public String saveProduct(@ModelAttribute ProductPojo productPojo) {
+		System.out.println(" ---->" + productPojo);
+		boolean addProduct = productServiceImpl.addProduct(productPojo);
+		if(addProduct) {
+			System.out.println("Data Saved successfully");
+		} else {
+			System.out.println("Data Not Saved");
+		}
+		return "null";
 	}
+	
+	
+	
 }

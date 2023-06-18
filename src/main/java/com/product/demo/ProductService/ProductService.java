@@ -1,12 +1,9 @@
 package com.product.demo.ProductService;
 
-import java.util.List;
-
-import com.product.demo.entity.ProductEntity;
+import com.product.demo.dto.ProductPojo;
 
 
 public interface ProductService {
 	
-	public ProductEntity addProduct(ProductEntity productEntity);
-	public List<ProductEntity> viewAllProduct();
+	public boolean addProduct(ProductPojo prodcutPojo);
 }
