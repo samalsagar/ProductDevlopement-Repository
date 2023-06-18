@@ -10,4 +10,6 @@ public interface ProductService {
 	public boolean addProduct(ProductPojo prodcutPojo);
 	
 	public List<ProductPojo> getAllProducts();
+	
+	public ProductPojo getProductById(Integer id);
 }
