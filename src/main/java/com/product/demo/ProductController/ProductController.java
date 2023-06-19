@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,7 +28,7 @@ public class ProductController {
 	}
 	
 	@PostMapping("/saveProduct")
-	public String saveProduct(@ModelAttribute ProductPojo productPojo) {
+	public String saveProduct(@RequestBody ProductPojo productPojo, @ModelAttribute ProductPojo productPojo2) {
 		System.out.println(" ---->" + productPojo);
 		boolean addProduct = productServiceImpl.addProduct(productPojo);
 		if(addProduct) {

@@ -1,7 +1,5 @@
 package com.product.demo.ProductService;
 
-import java.util.List;
-
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,6 +19,7 @@ public class ProductServiceImpl implements ProductService {
 	public boolean addProduct(ProductPojo prodcutPojo) {
 		
 		var price = prodcutPojo.getProdPrice();
+		
 		System.out.println("Price--->" + price);
 		double gst=price * 0.05;
 		System.out.println("GST--->" + gst);
