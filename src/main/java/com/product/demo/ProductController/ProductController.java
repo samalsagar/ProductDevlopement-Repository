@@ -44,13 +44,13 @@ public class ProductController {
 	}
 	
 	@GetMapping("/getAllData")
-	public List<ProductPojo> getAllData(Model model) {//Break point is there 
+	public List<ProductPojo> getAllData(Model model) {
 		
 		List<ProductPojo> allProduct = productServiceImpl.getAllProduct();
 		System.out.println("All Product-->" + allProduct);
 
 		
-		return allProduct;//AND here another break point
+		return allProduct;
 	}
 	
 	@GetMapping("/getone/{id}")
