@@ -10,6 +10,7 @@ public interface ProductService {
 	
 	public boolean addProduct(ProductPojo prodcutPojo);
 	
+
 	public List<ProductPojo> getAllProduct();
 	
 	public ProductPojo getProductById(int id);
@@ -17,4 +18,9 @@ public interface ProductService {
 	public String deleteProductById(int id);
 	
 	public Boolean editProduct(int id, ProductEntity productEntity);
+
+	public List<ProductPojo> getAllProducts();
+	
+	public ProductPojo getProductById(Integer id);
+
 }
