@@ -19,8 +19,4 @@ public interface ProductService {
 	
 	public Boolean editProduct(int id, ProductEntity productEntity);
 
-	public List<ProductPojo> getAllProducts();
-	
-	public ProductPojo getProductById(Integer id);
-
 }
