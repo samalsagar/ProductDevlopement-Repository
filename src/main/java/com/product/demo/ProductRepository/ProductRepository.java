@@ -8,4 +8,5 @@ import com.product.demo.entity.ProductEntity;
 
 public interface ProductRepository extends JpaRepository<ProductEntity, Serializable> {
 
+
 }

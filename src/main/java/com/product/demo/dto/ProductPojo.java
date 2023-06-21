@@ -1,9 +1,11 @@
 package com.product.demo.dto;
 
+
 import lombok.Data;
 
 @Data
-public class ProductPojo {
+
+public class ProductPojo  {
 	
 	private int prodId;
 
