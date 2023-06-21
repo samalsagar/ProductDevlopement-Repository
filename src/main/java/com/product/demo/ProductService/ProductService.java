@@ -18,6 +18,5 @@ public interface ProductService {
 	public String deleteProductById(int id);
 	
 	public Boolean editProduct(int id, ProductEntity productEntity);
-
-
+  
 }
