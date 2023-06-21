@@ -48,17 +48,6 @@ public class ProductServiceImpl implements ProductService {
 		}
 	}
 	
-	@Override
-	public List<ProductPojo> getAllProducts() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	@Override
-	public ProductPojo getProductById(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
 	public List<ProductPojo> getAllProduct() {
